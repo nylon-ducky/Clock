@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 .clock {
     width: 80vw;
     height: 80vh;
@@ -8,6 +12,7 @@
     display: flex;
     justify-content: center;
     margin: auto;
+    border: 3px solid black;
 }
 
 .nums {
@@ -23,7 +28,8 @@
 }
 
 #render {
-    color: black;
+    color: rgb(0, 0, 0);
+    padding-top: 50px;
     font-weight: bold;
 }
 
@@ -64,34 +70,60 @@
 .hour {
     position: absolute;
     background-color: black;
-    width: 4%;
+    width: 3%;
     height: 30%;
-    transform: rotate(calc(var(--tate) *1deg));
-    --tate: 11;
+    transform: rotate();
     transform-origin: bottom;
     bottom: 50%;
     border: 2px solid green;
+    color: white;
+    
 }
 
 .min {
-    --tate: (data.min);
+    
     border: solid 1px darkorange;
     position: absolute;
     background-color: black;
     width: 2%;
     height: 40%;
     transform-origin: bottom;
-    transform: rotate(calc(var(--tate) *1deg));
+    transform: rotate();
     bottom: 50%;
 
 }
 
 .sec {
-    --tate: 55;
+    
     position: absolute;
     background-color: rgb(255, 0, 0);
+    border: .5px solid black;
     width: .5%;
     height: 50%;
     transform-origin: bottom;
-    transform: rotate(calc(var(--tate) *1deg));
+    transform: rotate();
+}
+/*
+.mili {
+    position: absolute;
+    background-color: rgb(21, 255, 0);
+    width: 10px;
+    height: 50%;
+    transform-origin: bottom;
+    transform: rotate();
+    box-shadow: inset -5px 0 10px 0 black;
+    
+}
+*/
+
+.clock::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(31, 121, 180);
+    z-index: 10;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    bottom: 48%;
+    
 }
