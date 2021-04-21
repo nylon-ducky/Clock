@@ -1,0 +1,97 @@
+.clock {
+    width: 80vw;
+    height: 80vh;
+    border-radius: 50%;
+    background-color: darkgrey;
+    opacity: .6;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.nums {
+    position: absolute;
+    text-align: center;
+    display:block;
+    font-size: 3em;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    transform: rotate(var(--tate));
+    
+}
+
+#render {
+    color: black;
+    font-weight: bold;
+}
+
+#n1{
+   --tate: 30deg;
+}
+#n2{
+    --tate: 60deg;
+}
+#n3 {
+    --tate: 90deg;
+}
+#n4{
+    --tate: 120deg;
+}
+#n5{
+    --tate: 150deg;
+}
+#n6{
+    --tate: 180deg;
+}
+#n7{
+    --tate: 210deg;
+}
+#n8{
+    --tate: 240deg;
+}
+#n9{
+    --tate: 270deg;
+}
+#n10{
+    --tate: 300deg;
+}
+#n11{
+    --tate: 330deg;
+}
+
+.hour {
+    position: absolute;
+    background-color: black;
+    width: 4%;
+    height: 30%;
+    transform: rotate(calc(var(--tate) *1deg));
+    --tate: 11;
+    transform-origin: bottom;
+    bottom: 50%;
+    border: 2px solid green;
+}
+
+.min {
+    --tate: (data.min);
+    border: solid 1px darkorange;
+    position: absolute;
+    background-color: black;
+    width: 2%;
+    height: 40%;
+    transform-origin: bottom;
+    transform: rotate(calc(var(--tate) *1deg));
+    bottom: 50%;
+
+}
+
+.sec {
+    --tate: 55;
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    width: .5%;
+    height: 50%;
+    transform-origin: bottom;
+    transform: rotate(calc(var(--tate) *1deg));
+}
