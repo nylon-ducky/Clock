@@ -106,7 +106,7 @@ body {
     height: 50%;
     transform-origin: bottom;
     transform: rotate();
-    z-index: 7;
+    z-index: 6;
 }
 /*
 .mili {
