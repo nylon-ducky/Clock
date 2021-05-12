@@ -7,10 +7,10 @@ body {
 }
 
 .clock {
-    width: 80vw;
-    height: 80vh;
+    width: 800px;
+    height: 800px;
     border-radius: 50%;
-    background-color: rgba(169, 169, 169, 0.548);
+    background-color: rgba(169, 169, 169, 0.65);
     opacity: .9;
     position: relative;
     display: flex;
@@ -29,6 +29,8 @@ body {
     margin: auto;
     transform: rotate(var(--tate));
     z-index: 9;
+    font-weight: bold;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.75);
 }
 
 #render {
